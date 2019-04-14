@@ -286,6 +286,9 @@ enum {
     ANDROID_CPU_ARM64_FEATURE_SM4               = (1 << 20),
     
     ANDROID_CPU_ARM64_FEATURE_EVTSTRM           = (1 << 21),
+    
+    // Flag Manipulation
+    ANDROID_CPU_ARM64_FEATURE_FLAGM             = (1 << 22)
 };
 
 /* The bit flags corresponding to the output of android_getCpuFeatures()

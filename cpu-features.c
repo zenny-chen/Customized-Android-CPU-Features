@@ -969,28 +969,29 @@ android_cpuInit(void)
         uint32_t hwcaps = 0;
         hwcaps = get_elf_hwcap_from_getauxval(AT_HWCAP);
         if (hwcaps != 0) {
-            const bool has_fp           = (hwcaps & HWCAP_FP);
-            const bool has_asimd        = (hwcaps & HWCAP_ASIMD);
-            const bool has_aes          = (hwcaps & HWCAP_AES);
-            const bool has_pmull        = (hwcaps & HWCAP_PMULL);
-            const bool has_sha1         = (hwcaps & HWCAP_SHA1);
-            const bool has_sha2         = (hwcaps & HWCAP_SHA2);
-            const bool has_crc32        = (hwcaps & HWCAP_CRC32);
-            const bool has_lse          = (hwcaps & HWCAP_ATOMICS);
-            const bool has_fp16         = (hwcaps & HWCAP_FPHP);
-            const bool has_dot_product  = (hwcaps & HWCAP_ASIMDDP);
-            const bool has_rdm          = (hwcaps & HWCAP_ASIMDRDM);
-            const bool has_fhm          = (hwcaps & HWCAP_ASIMDFHM);
-            const bool has_asimdfp16    = (hwcaps & HWCAP_ASIMDHP);
-            const bool has_complex      = (hwcaps & HWCAP_FCMA);
-            const bool has_lrcpc        = (hwcaps & HWCAP_ILRCPC);
-            const bool has_dcpop        = (hwcaps & HWCAP_DCPOP);
-            const bool has_dit          = (hwcaps & HWCAP_DIT);
-            const bool has_uscat        = (hwcaps & HWCAP_USCAT);
-            const bool has_sha3         = (hwcaps & HWCAP_SHA3);
-            const bool has_sm3          = (hwcaps & HWCAP_SM3);
-            const bool has_sm4          = (hwcaps & HWCAP_SM4);
-            const bool has_evtstrm      = (hwcaps & HWCAP_EVTSTRM);
+            const bool has_fp           = (hwcaps & HWCAP_FP) != 0;
+            const bool has_asimd        = (hwcaps & HWCAP_ASIMD) != 0;
+            const bool has_aes          = (hwcaps & HWCAP_AES) != 0;
+            const bool has_pmull        = (hwcaps & HWCAP_PMULL) != 0;
+            const bool has_sha1         = (hwcaps & HWCAP_SHA1) != 0;
+            const bool has_sha2         = (hwcaps & HWCAP_SHA2) != 0;
+            const bool has_crc32        = (hwcaps & HWCAP_CRC32) != 0;
+            const bool has_lse          = (hwcaps & HWCAP_ATOMICS) != 0;
+            const bool has_fp16         = (hwcaps & HWCAP_FPHP) != 0;
+            const bool has_dot_product  = (hwcaps & HWCAP_ASIMDDP) != 0;
+            const bool has_rdm          = (hwcaps & HWCAP_ASIMDRDM) != 0;
+            const bool has_fhm          = (hwcaps & HWCAP_ASIMDFHM) != 0;
+            const bool has_asimdfp16    = (hwcaps & HWCAP_ASIMDHP) != 0;
+            const bool has_complex      = (hwcaps & HWCAP_FCMA) != 0;
+            const bool has_lrcpc        = (hwcaps & HWCAP_ILRCPC) != 0;
+            const bool has_dcpop        = (hwcaps & HWCAP_DCPOP) != 0;
+            const bool has_dit          = (hwcaps & HWCAP_DIT) != 0;
+            const bool has_uscat        = (hwcaps & HWCAP_USCAT) != 0;
+            const bool has_sha3         = (hwcaps & HWCAP_SHA3) != 0;
+            const bool has_sm3          = (hwcaps & HWCAP_SM3) != 0;
+            const bool has_sm4          = (hwcaps & HWCAP_SM4) != 0;
+            const bool has_evtstrm      = (hwcaps & HWCAP_EVTSTRM) != 0;
+            const bool has_flagm        = (hwcaps & HWCAP_FLAGM) != 0;
 
             if(has_fp == 0) {
                 D("ERROR: Floating-point unit missing, but is required by Android on AArch64 CPUs\n");
@@ -1043,6 +1044,8 @@ android_cpuInit(void)
                 g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_SM4;
             if(has_evtstrm)
                 g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_EVTSTRM;
+            if(has_flagm)
+                g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_FLAGM;
         }
     }
 #endif /* __aarch64__ */
