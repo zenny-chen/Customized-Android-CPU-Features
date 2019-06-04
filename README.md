@@ -1,7 +1,7 @@
 # Customized-Android-CPU-Features
 Customized Android CPU Features, especially extend ARMv8 supplementary features
 
-To compile with ARMv8.4 plus AES instruction set, use <font color="red">`-march=armv8.4a+aes`</font>.
+To compile with ARMv8.4 plus AES instruction set, <font color="red">use</font> `-march=armv8.4a+aes`.
 
 #### Relevant information
 
