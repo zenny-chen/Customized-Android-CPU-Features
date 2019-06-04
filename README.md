@@ -1,6 +1,8 @@
 # Customized-Android-CPU-Features
 Customized Android CPU Features, especially extend ARMv8 supplementary features
 
+To compile with ARMv8.4 plus AES instruction set, use `-march=armv8.4a+aes`.
+
 #### Relevant information
 
 1. [ARMv8 - ARM](https://en.wikichip.org/wiki/arm/armv8)
