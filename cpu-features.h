@@ -288,7 +288,10 @@ enum {
     ANDROID_CPU_ARM64_FEATURE_EVTSTRM           = (1 << 21),
     
     // Flag Manipulation
-    ANDROID_CPU_ARM64_FEATURE_FLAGM             = (1 << 22)
+    ANDROID_CPU_ARM64_FEATURE_FLAGM             = (1 << 22),
+    
+    // Floating-point Javascript Convert to Signed fixed-point
+    ANDROID_CPU_ARM64_FEATURE_JSCVT             = (1 << 23)
 };
 
 /* The bit flags corresponding to the output of android_getCpuFeatures()

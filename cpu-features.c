@@ -980,6 +980,7 @@ android_cpuInit(void)
             const bool has_fp16         = (hwcaps & HWCAP_FPHP) != 0;
             const bool has_dot_product  = (hwcaps & HWCAP_ASIMDDP) != 0;
             const bool has_rdm          = (hwcaps & HWCAP_ASIMDRDM) != 0;
+            const bool has_jscvt        = (hwcaps & HWCAP_JSCVT) != 0;
             const bool has_fhm          = (hwcaps & HWCAP_ASIMDFHM) != 0;
             const bool has_asimdfp16    = (hwcaps & HWCAP_ASIMDHP) != 0;
             const bool has_complex      = (hwcaps & HWCAP_FCMA) != 0;
@@ -1046,6 +1047,8 @@ android_cpuInit(void)
                 g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_EVTSTRM;
             if(has_flagm)
                 g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_FLAGM;
+            if(has_jscvt)
+                g_cpuFeatures |= ANDROID_CPU_ARM64_FEATURE_JSCVT;
         }
     }
 #endif /* __aarch64__ */
