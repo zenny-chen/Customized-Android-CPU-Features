@@ -1,4 +1,4 @@
-# Customized-Android-CPU-Features
+# Customized Android CPU Features
 Customized Android CPU Features, especially extend ARMv8 supplementary features
 
 To compile with ARMv8.4 plus AES and SHA3 instruction set, use `-march=armv8.4a+aes+sha3`.
