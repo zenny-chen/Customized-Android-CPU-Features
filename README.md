@@ -23,6 +23,7 @@ In addition in Windows 10, `cpu-features.h` is located in `%USERPROFILE%/AppData
 - `STLUR`, `STLURB` and `STLURH` require **ARMv8.4a** architecture.
 - [getauxval(3) — Linux manual page](https://www.man7.org/linux/man-pages/man3/getauxval.3.html)
 - **`asm/hwcap.h`** header for arm64: [https://github.com/torvalds/linux/blob/master/arch/arm64/include/uapi/asm/hwcap.h](https://github.com/torvalds/linux/blob/master/arch/arm64/include/uapi/asm/hwcap.h)
+- [https://github.com/gcc-mirror/gcc/blob/master/gcc/config/aarch64/arm_sve.h](https://github.com/gcc-mirror/gcc/blob/master/gcc/config/aarch64/arm_sve.h)
 
 <br />
 
