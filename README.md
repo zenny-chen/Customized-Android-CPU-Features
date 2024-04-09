@@ -21,6 +21,7 @@ In addition in Windows 10, `cpu-features.h` is located in `%USERPROFILE%/AppData
 - [Bringing Armv8.2 Instructions to Android Runtime](https://community.arm.com/developer/tools-software/oss-platforms/b/android-blog/posts/bringing-armv8-2-instructions-to-android-runtime)
 - [package cpu](https://www.godoc.org/golang.org/x/sys/cpu) （There's an error here: `ASIMDDP` does not mean Double-Precision. It means Dot Production, i.e. has_dotprod_feature.）
 - `STLUR`, `STLURB` and `STLURH` require **ARMv8.4a** architecture.
+- [getauxval(3) — Linux manual page](https://www.man7.org/linux/man-pages/man3/getauxval.3.html)
 - **`asm/hwcap.h`** header for arm64: [https://github.com/torvalds/linux/blob/master/arch/arm64/include/uapi/asm/hwcap.h](https://github.com/torvalds/linux/blob/master/arch/arm64/include/uapi/asm/hwcap.h)
 
 <br />
